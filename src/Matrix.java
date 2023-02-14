@@ -101,7 +101,7 @@ public class Matrix {
      */
     public Matrix add(Matrix other){
         if (other.getRows() != rows || other.getCols() != cols){
-            throw new ArithmeticException("Matrix dimensions do mot match");
+            throw new ArithmeticException("Matrix dimensions do not match");
         }
 
         Matrix result = new Matrix(rows, cols);
@@ -121,7 +121,7 @@ public class Matrix {
 
     public Matrix subtract(Matrix other){
         if (other.getRows() != rows || other.getCols() != cols){
-            throw new ArithmeticException("Matrix dimensions do mot match");
+            throw new ArithmeticException("Matrix dimensions do not match");
         }
 
         Matrix result = new Matrix(rows, cols);
@@ -157,7 +157,7 @@ public class Matrix {
      */
     public Matrix multiply(Matrix other){
         if (cols != other.getRows()){
-            throw new ArithmeticException("Matrix dimensions do mot match");
+            throw new ArithmeticException("Matrix dimensions do not match");
         }
         Matrix result = new Matrix(rows, other.getCols());
 
@@ -239,7 +239,7 @@ public class Matrix {
      */
     public Complex determinant() {
         if (cols != rows){
-            throw new ArithmeticException("Matrix dimensions do mot match");
+            throw new ArithmeticException("Matrix dimensions do not match");
         }
         return this.determinantOfMatrix(this.matrix, rows);
     }
